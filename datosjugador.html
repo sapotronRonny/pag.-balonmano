@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>CURSOS EN LINEA ULEAM</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='styledatosju.css'>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
+
+    </head>
+<body class="bodydatos">
+    <header>
+        <div class="logo">
+            <a href="homejugador.html">
+                <img src="imagenes/logo_escuela.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <div class="botones">
+            <a class="prueba" href="perfildejugador_html.php">
+            <button id="registro" class="boton">PERFIL</button>
+            </a>
+            <a class="prueba" href="cursodisponible_html.php">
+                <button id="registro" class="boton">CURSOS</button>
+            </a>
+            <a class="prueba" href="miscursos_html.php">
+                <button id="registro" class="boton">MIS CURSOS</button>
+            </a>
+            <a class="prueba" href="homejugador.html">
+            <button id="noticias" class="boton">HOME</button>
+            </a>
+            <a class="prueba" href="index.html">
+            <button id="registro" class="boton">SALIR</button>
+            </a>
+
+        </div>
+    </header>
+
+
+<!-- comienza el cuerpo de la pag -->
+<div id="imagenp">
+    <div id="titulosec">
+        <div id="tituloprincipal">A CERCA DE</div>
+        <div id="textopequeno">Información de contacto</div>
+        <a href="index.html">
+        <div id="textonegrilla">Inicio</div>
+        </a>
+    </div>
+</div>
+
+
+<br>
+<div class="hoja-4a">
+    <!-- Lista de información de contacto -->
+    <div class="containerdatos">
+        <h2>DATOS DE JUGADOR</h2>
+        <form action="datosjugador.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+    
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+    
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+    
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+    
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+    
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
+</div>
+
+
+   
+<div class="footer">
+    <img class="logotipo" src="imagenes/logo_escuela.png" alt="Logotipo Grande">
+    <img class="imagenes-pequenas" src="imagenes/face.png" alt="Imagen Pequeña 1">
+    <img class="imagenes-pequenas" src="imagenes/tiktok.png" alt="Imagen Pequeña 2">
+    <img class="imagenes-pequenas" src="imagenes/insta.png" alt="Imagen Pequeña 3">
+    <img class="imagenes-pequenas" src="imagenes/youtubes.png" alt="Imagen Pequeña 4">
+    
+    <div class="clear"></div>
+       
+</div>
+</body>
+</html>

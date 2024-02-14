@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styleloju.css'>
+    <script src='login.js'></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="login.html">
+                <img src="imagenes/logo_escuela.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <div class="botones">
+            <a class="prueba" href="acercade.html">
+            <button id="acercade" class="boton">A CERCA DE</button>
+            </a>
+            <a class="prueba" href="calendario.html">
+            <button id="calendario" class="boton">CALENDARIO</button>
+            </a>
+            <a class="prueba" href="noticias_html.php">
+            <button id="noticias" class="boton">NOTICIAS</button>
+            </a>
+            <a class="prueba" href="registrogo.html">
+            <button id="registro" class="boton">INSCRIBETE</button>
+            </a>
+
+        </div>
+    </header>
+
+
+<br>
+    <div class="cuadro" ALIGN="CENTER">
+        <section class="formulario" ALIGN="CENTER">
+            <h2 style="color: #00aff0; text-shadow: 1px 1px 2px black;">SIGN IN</h2><br>
+
+            <br>
+
+            <form id="miformulario" style="font-family: 'Raleway', sans-serif;" action="autenticar2.php" method="post" onsubmit="return validarFormulario()">
+                <label for="correo">Correo:</label><br>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+    
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena_hash" name="contrasena_hash" required>
+                <br><br>
+     
+                <input src="homejugador.html" type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+<br>
+
+
+    <div class="footer">
+        <img class="logotipo" src="imagenes/logo_escuela.png" alt="Logotipo Grande">
+        <img class="imagenes-pequenas" src="imagenes/face.png" alt="Imagen Pequeña 1">
+        <img class="imagenes-pequenas" src="imagenes/tiktok.png" alt="Imagen Pequeña 2">
+        <img class="imagenes-pequenas" src="imagenes/insta.png" alt="Imagen Pequeña 3">
+        <img class="imagenes-pequenas" src="imagenes/youtubes.png" alt="Imagen Pequeña 4">
+        <a href="login.html">
+            <div id="textonegrilla">LOGIN DE ADMINISTRADOR</div>
+        </a>
+        <a href="loginjugador.html">
+            <div id="textonegrilla">LOGIN DE JUGADOR</div>
+        </a>
+        <div class="clear"></div>
+</body>
+</html>

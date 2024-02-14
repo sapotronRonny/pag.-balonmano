@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>CURSOS EN LINEA ULEAM</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='stylenoti.css'>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+    
+        <script src='myscriptnotiadmin.js'></script>
+    </head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="homedeadmin.html">
+                <img src="imagenes/logo_escuela.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <div class="botones">
+            <a class="prueba" href="aver_html.php">
+                <button id="registro" class="boton">AGREGAR PLANTEL</button>
+            </a>
+            <a class="prueba" href="curso_html.php">
+                <button id="registro" class="boton">AGREGAR CURSOS</button>
+            </a>
+            <a class="prueba" href="registro.html">
+                <button id="registro" class="boton">REGISTRAR</button>
+            </a>
+            <a class="prueba" href="noticiaadmi_html.php">
+                <button id="registro" class="boton">NOTICIAS</button>
+            </a>
+
+        </div>
+    </header>
+
+    
+
+<!-- comienza el cuerpo de la pag -->
+<div id="imagenp">
+    <div id="titulosec">
+        <div id="tituloprincipal">NOTICIAS</div>
+        <div id="textopequeno">Noticias del club</div>
+        <a href="index.html">
+        <div id="textonegrilla">Inicio</div>
+        </a>
+    </div>
+</div>
+
+
+<div class="columnas">
+<!-- aqui se agregan los bloques de noticias -->
+
+<br><br><br><br>
+<!--
+<div class="news-card">
+    <img src="B:\Users\pazmi\Downloads\IMAGENES\salita.jpg" alt="Imagen de noticias">
+    <h2><a href="seccionnoticiaadmin_html.php#imagennoti">de las noticias</a></h2>
+    <p>Descripción de las noticias...</p>
+  </div> -->
+  
+  </div>
+  
+
+  <div class="columnas">
+  <?php
+include('conexion.php');
+$consulta = "SELECT * FROM noticias";
+$resultado = mysqli_query($conexion, $consulta);
+
+if (mysqli_num_rows($resultado) > 0) {
+    while ($fila = mysqli_fetch_assoc($resultado)) {
+        echo '<div class="news-card">';
+        echo '<img src="' . $fila['imagen_path'] . '" alt="Imagen de noticias">';
+        echo '<h2><a href="seccionnoticiaadmin_html.php#imagennoti">' . $fila['titulo'] . '</a></h2>';
+        echo '<p>' . $fila['descripcion'] . '</p>';
+        echo '</div>';
+    }
+} else {
+    echo '<p>No hay noticias para mostrar.</p>';
+}
+?>
+</div>
+
+
+  
+  <div class="pagination">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>Siguiente</button>
+  </div>
+  
+<!-- Ventana emergente para agregar noticia -->
+<div id="ventanaAgregarNoticia" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; border-radius: 8px;">
+    <form action="guardar_noti.php" method="post" enctype="multipart/form-data">    
+         <label for="imagenInput">Seleccionar Imagen:</label>
+        <input type="file" id="imagenInput" name="imagen" accept="image/*" required>
+
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" rows="4" name="descripcion" required></textarea>
+
+        <label for="descripcion">contenido:</label>
+        <input type="text" id="contenido" name="contenido" required>
+        <button onclick="agregarNoticia()">Agregar Noticia</button>
+        <button onclick="cerrarVentanaAgregarNoticia()">Cancelar</button>
+    </form>
+    </div>
+</div>
+
+  <button onclick="mostrarVentanaAgregarNoticia()">Agregar Noticia</button>
+
+<!-- hasta aqui -->
+
+   
+   <div class="footer">
+    <img class="logotipo" src="imagenes/logo_escuela.png" alt="Logotipo Grande">
+    <img class="imagenes-pequenas" src="imagenes/face.png" alt="Imagen Pequeña 1">
+    <img class="imagenes-pequenas" src="imagenes/tiktok.png" alt="Imagen Pequeña 2">
+    <img class="imagenes-pequenas" src="imagenes/insta.png" alt="Imagen Pequeña 3">
+    <img class="imagenes-pequenas" src="imagenes/youtubes.png" alt="Imagen Pequeña 4">
+    <a href="index.html">
+        <div id="textonegrilla">SALIR DE MODOD ADMINISTRADOR</div>
+    </a>
+    <div class="clear"></div>
+       
+</div>
+</body>
+</html>
